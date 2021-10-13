@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap");
+
+:root {
+  --color-main: #80b0b4;
+  --color-dark-green: #185b61;
+  --color-text: #3a3a3a;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 90%;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 1.8rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.btn {
+  background-color: var(--color-dark-green);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 5px 30px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.hidden img {
+  visibility: hidden;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--color-text);
+}
+
+.box {
+  max-width: 600px;
+  height: 600px;
+  background-color: var(--color-main);
+  padding: 2rem;
+  margin: 0 2%;
+}
+
+.box .text span {
+  color: var(--color-dark-green);
+}
+
+.box .text {
+  margin-bottom: 5rem;
+}
+
+.box .inputs {
+  display: grid;
+  grid-template-columns: 0.7fr 0.3fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.box .inputs input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--color-dark-green);
+  outline: none;
+  padding-bottom: 2px;
+  color: var(--color-dark-green);
+  font-weight: 500;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.box .inputs input::placeholder {
+  color: var(--color-dark-green);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.box .law {
+  display: flex;
+  gap: 1rem;
+}
+
+.box .law .checkbox {
+  align-self: flex-start;
+  border: 2px solid var(--color-dark-green);
+  height: 28px;
+  cursor: pointer;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 5rem;
+}
+
+.popup span {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 80%;
+  }
+
+  .box .inputs {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  html {
+    font-size: 70%;
+  }
+
+  .box .text {
+    margin-bottom: 3rem;
+  }
+
+  .btn {
+    margin-top: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
